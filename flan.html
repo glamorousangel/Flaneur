@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* Overlay gradient */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.6),
+                rgba(0, 0, 0, 0.6)
+            );
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Logo top-left */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+        }
+
+        /* Main content */
+        .overlay i {
+            font-size: 80px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .overlay h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .overlay p {
+            font-size: 1.2rem;
+            max-width: 500px;
+            margin-bottom: 50px;
+        }
+
+        /* Social section */
+        .social-section {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+        }
+
+        .social-section small {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .social {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .social a {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social a:hover {
+            color: #ffffff;
+        }
+
+        .social a i {
+            font-size: 1.50rem;
+        }
+
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background video -->
+    <video class="video-background" autoplay muted loop playsinline>
+        <source src="car.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay content -->
+    <div class="overlay">
+        <!-- Logo top-left -->
+        <img src="logo.png" alt="Website Logo" class="logo">
+
+        <!-- Main maintenance message -->
+        <i class="fas fa-tools"></i>
+        <h1>Under Maintenance</h1>
+        <p>We’re working hard to improve our site. Please check back later.</p>
+
+        <!-- Social links at bottom -->
+        <div class="social-section">
+            <small>For more updates, Visit Us.</small>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
